@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Vote - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="main-container">
+        <div class="card">
+            <h1>Secure Voting System</h1>
+            <p>Blockchain-powered secure elections</p>
+            
+            <!-- Signup Form (Default) -->
+            <div id="signup-form">
+                <input type="text" id="aadhar-signup" placeholder="12-digit Aadhar ID" maxlength="12">
+                <input type="number" id="age" placeholder="Age" min="18">
+                <button class="btn-primary" onclick="signup()">Sign Up</button>
+                <p class="toggle-link" onclick="toggleToLogin()">Already registered? Login</p>
+            </div>
+            
+            <!-- Login Form (Hidden) -->
+            <div id="login-form" style="display: none;">
+                <input type="text" id="aadhar-login" placeholder="Aadhar ID" maxlength="12">
+                <button class="btn-primary" onclick="login()">Login</button>
+                <p class="toggle-link" onclick="toggleToSignup()">New voter? Sign Up</p>
+            </div>
+            
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
